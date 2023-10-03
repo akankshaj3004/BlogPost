@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}    
+<div class="content-section">
+    {% if err == "404" %}
+    <h1>Oops. Page not found</h1>
+    <p>Please try different location</p>
+    {% elif err == "403" %}
+    <h1>You don't have permission to do that</h1>
+    <p>Please check your account and try again</p>
+    {% else %}
+    <h1>Something went wrong</h1>
+    <p>We're facing some issues. Please try again later</p>
+    {% endif %}
+</div>
+{% endblock content %}
+
+
+
